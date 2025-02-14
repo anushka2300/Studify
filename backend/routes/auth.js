@@ -3,7 +3,7 @@ const {signupValid} =require("../middlewares/checkAuth")
 const {loginValid}=require("../middlewares/checkAuth")
 const {authMiddleware} =require('../middlewares/checkAuth')
 const user=require('../models/user')
-const bcrypt=require('bcrypt');
+const bcrypt=require('bcryptjs');
 
 const jwt=require('jsonwebtoken')
 router.post('/signup',signupValid,async (req,res)=>{
