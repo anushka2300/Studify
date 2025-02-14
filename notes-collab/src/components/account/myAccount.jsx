@@ -10,7 +10,7 @@ const MyAccount = () => {
   const fetchUser = async () => {
     const token = sessionStorage.getItem("token");
     try {
-      const response = await fetch("http://localhost:8000/auth/getuser", {
+      const response = await fetch(`${process.env.URL}/auth/getuser`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

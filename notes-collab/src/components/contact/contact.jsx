@@ -14,7 +14,7 @@ const ContactUs = () => {
     const handleSubmit=async (e)=>{
         e.preventDefault();
         try {
-            const response = await fetch('http://localhost:8000/contact/contact', {
+            const response = await fetch(`${process.env.URL}/contact/contact`, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify(formData),

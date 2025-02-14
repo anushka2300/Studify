@@ -29,7 +29,7 @@ const Login = () => {
       return toast.error("Incomplete credentials");
     }
     try{
-      const response=await fetch("http://localhost:8000/auth/signup",{
+      const response=await fetch(`${process.env.URL}/auth/signup`,{
         method:"POST",
         headers:{
           'Content-Type':'application/json'
@@ -61,7 +61,7 @@ const Login = () => {
         return toast.error("Incomplete credentials");
       }
       try{
-         const response=await fetch("http://localhost:8000/auth/login",{
+         const response=await fetch(`${process.env.URL}/auth/login`,{
           method:"POST",
           headers:{
              'Content-Type': 'application/json'

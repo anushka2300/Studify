@@ -6,7 +6,7 @@ const Favourites = () => {
 
   const fav = async () => {
     const token = sessionStorage.getItem('token');
-    const response = await fetch(`http://localhost:8000/uploadfiles/getfavourites`, {
+    const response = await fetch(`${process.env.URL}/uploadfiles/getfavourites`, {
       method: "GET",
       headers: {
         "Authorization": `Bearer ${token}`,

@@ -163,7 +163,7 @@ const Notes = () => {
         try{
           const token = sessionStorage.getItem('token');
           console.log("data sent")
-          const response=await fetch("http://localhost:8000/uploadfiles/uploadfile",{
+          const response=await fetch(`${process.env.URL}/uploadfiles/uploadfile`,{
             method:"POST",
             headers: {
               'Authorization': `Bearer ${token}`,
