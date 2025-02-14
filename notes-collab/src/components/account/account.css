@@ -1,0 +1,300 @@
+.sidebar {
+  width: 250px;
+  background-color: #1e222a;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  transition: width 0.3s ease;
+}
+
+.head {
+  margin-top: 50px;
+}
+
+.sidebar .profile {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.sidebar .profile h2 {
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+}
+
+.sidebar .profile p {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.sidebar .menu {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.sidebar .menu li {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.sidebar .menu a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar .menu a:hover {
+  background-color: #575757;
+}
+
+.main-content {
+  margin-left: 270px;
+  padding: 20px;
+  min-height: 100vh;
+  overflow-y: auto;
+  background-color: #1c1c1c;
+  transition: margin-left 0.3s ease;
+}
+
+.notes-container {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #dfdada;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.notes-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.notes-description {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#title,
+#descript,
+#file {
+  width: 100%;
+}
+
+label {
+  font-size: 1rem;
+  color: #333;
+  font-weight: bold;
+}
+
+input[type="text"],
+textarea,
+input[type="file"],
+select {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  color: #333;
+  background-color: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #61dafb;
+  box-shadow: 0 0 5px rgba(97, 218, 251, 0.5);
+}
+
+.submit-button {
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #f9f9f9;
+  background-color: #30363d;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #61dafb;
+  color: #30363d;
+}
+
+.account-container {
+  display: flex;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #1e222a;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  left: -250px;  
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1100;
+  background-color: #30363d;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-toggle:hover {
+  background-color: #61dafb;
+  color: #30363d;
+}
+
+.main-content {
+  margin-left: 0;
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+  flex: 1;
+  background-color: #1c1c1c;
+  min-height: 100vh;
+}
+
+.main-content.shifted {
+  margin-left: 270px;
+}
+
+@media (max-width: 768px) {
+  .main-content.shifted {
+    margin-left: 0;
+  }
+}
+
+ 
+@media (max-width: 1024px) {
+  .main-content {
+    margin-left: 220px;
+  }
+
+  .sidebar {
+    width: 200px;
+  }
+
+  .notes-container {
+    padding: 15px;
+  }
+
+  .notes-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 180px;
+    padding: 10px;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .notes-container {
+    margin: 20px;
+    padding: 10px;
+  }
+
+  .notes-title {
+    font-size: 1.5rem;
+  }
+
+  .notes-description {
+    font-size: 1rem;
+  }
+
+  .box {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .menu a {
+    text-align: center;
+    padding: 8px;
+  }
+
+  .notes-container {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .notes-title {
+    font-size: 1.2rem;
+  }
+
+  .form-group input,
+  textarea,
+  select {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  .submit-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
