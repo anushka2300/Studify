@@ -1,8 +1,8 @@
 import React from 'react';
-import './ContactUs.css';  
+import './contactus.css';  
 import { useState } from 'react';
 import Navbar from '../navbar/navbar';
-const ContactUs = () => {
+const Contact = () => {
     const [formData, setFormData] = useState({ name: '', email: '', message: '' });
     const [responseMessage, setResponseMessage] = useState('');
 
@@ -54,4 +54,4 @@ const ContactUs = () => {
   );
 };
 
-export default ContactUs;
+export default Contact;

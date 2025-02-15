@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "../branchCard/card";
+import Card from "../branchCard/Card";
 import './Branche.css'
 import Navbar from "../navbar/navbar";
 

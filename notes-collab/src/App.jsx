@@ -3,12 +3,12 @@ import Branch from './components/Branche/Branche'
 import Subject from './components/subjects/subject';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './components/login/login';
-import About from './components/about/about'
-import ContactUs from './components/contact/contact';
-import Account from './components/account/myAccount'
-import Notes from "./components/account/notes"
-import Myuploads  from "./components/account/myUploads"
-import Favourites from './components/account/favourites';
+import About from './components/about/About'
+import ContactUs from './components/contact/Contact';
+import Account from './components/account/MyAccount'
+import Notes from "./components/account/Notes"
+import Myuploads  from "./components/account/MyUploads"
+import Favourites from './components/account/Favourites';
 import Sub from './components/sub/sub'
 function App() {
 

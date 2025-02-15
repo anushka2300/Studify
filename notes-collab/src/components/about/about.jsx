@@ -1,5 +1,5 @@
 import React from "react";
-import "./about.css";
+import "./About.css";
 import Navbar from "../navbar/navbar";
 const About = () => {
   return (

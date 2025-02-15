@@ -1,6 +1,6 @@
 "use client"
 import React from 'react'
-import './card.css'
+import './Card.css'
 const Card = ({title,icon,description}) => {
     const handleClick=()=>{
         window.location.href=`/${title.toLowerCase().replace(/\s+/g, "_")}`
