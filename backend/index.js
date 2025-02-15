@@ -11,7 +11,11 @@ const PORT =process.env.PORT || 8000;
 require('./db')
 
 app.use(bodyParser.json());
-app.use(cors({ origin: 'https://exquisite-macaron-d6bbe5.netlify.app', credentials: true }));
+app.use(cors({
+    origin: ['https://exquisite-macaron-d6bbe5.netlify.app', 'http://localhost:5173'],
+    credentials: true
+}));
+
 
 
 app.use('/auth',authRoute)
