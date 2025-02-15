@@ -29,7 +29,7 @@ const Login = () => {
       return toast.error("Incomplete credentials");
     }
     try{
-      const response=await fetch(`${process.env.URL}/auth/signup`,{
+      const response=await fetch(`https://studify-backend.onrender.com/auth/signup`,{
         method:"POST",
         headers:{
           'Content-Type':'application/json'
@@ -61,7 +61,7 @@ const Login = () => {
         return toast.error("Incomplete credentials");
       }
       try{
-         const response=await fetch(`${process.env.URL}/auth/login`,{
+         const response=await fetch(`https://studify-backend.onrender.com/auth/login`,{
           method:"POST",
           headers:{
              'Content-Type': 'application/json'

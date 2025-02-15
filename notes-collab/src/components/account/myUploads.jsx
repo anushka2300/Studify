@@ -6,7 +6,7 @@ const myUploads = () => {
       const getfiles=async ()=>{
         const token = sessionStorage.getItem('token');
           try{
-            const response=await fetch(`${process.env.URL}/uploadfiles/getfiles`,{
+            const response=await fetch(`https://studify-backend.onrender.com/uploadfiles/getfiles`,{
               headers: {
                 Authorization: `Bearer ${token}`,  
             },
@@ -23,7 +23,7 @@ const myUploads = () => {
       const deleteFile = async (fileId) => {
         try {
             const token = sessionStorage.getItem("token");  
-            const response = await fetch(`${process.env.URL}/uploadfiles/removefiles/${fileId}`, {
+            const response = await fetch(`https://studify-backend.onrender.com/uploadfiles/removefiles/${fileId}`, {
               method: "DELETE",
               headers: {
                   "Authorization": `Bearer ${token}`,
@@ -60,7 +60,7 @@ const myUploads = () => {
               <p>
                 <strong>File Name:</strong>{" "}
                 <a
-                  href={`${process.env.URL}/files/${upload.pdf}`}
+                  href={`https://studify-backend.onrender.com/files/${upload.pdf}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="link"

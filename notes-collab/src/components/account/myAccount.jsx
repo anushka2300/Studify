@@ -10,7 +10,7 @@ const MyAccount = () => {
   const fetchUser = async () => {
     const token = sessionStorage.getItem("token");
     try {
-      const response = await fetch(`${process.env.URL}/auth/getuser`, {
+      const response = await fetch(`https://studify-backend.onrender.com/auth/getuser`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

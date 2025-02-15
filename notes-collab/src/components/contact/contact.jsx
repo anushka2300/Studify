@@ -14,7 +14,7 @@ const Contact = () => {
     const handleSubmit=async (e)=>{
         e.preventDefault();
         try {
-            const response = await fetch(`${process.env.URL}/contact/contact`, {
+            const response = await fetch(`https://studify-backend.onrender.com/contact/contact`, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify(formData),

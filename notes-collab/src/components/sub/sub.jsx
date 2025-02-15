@@ -12,7 +12,7 @@ const Sub = () => {
 
   const getfiles = async () => {
     try {
-      const response = await fetch(`${process.env.URL}/uploadfiles/getfiles/${subject}`, {
+      const response = await fetch(`https://studify-backend.onrender.com/uploadfiles/getfiles/${subject}`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -31,7 +31,7 @@ const Sub = () => {
     
     try {
       const userId=sessionStorage.getItem('userId');
-      const response = await fetch(`${process.env.URL}/uploadfiles/like/${id}`, {
+      const response = await fetch(`https://studify-backend.onrender.com/uploadfiles/like/${id}`, {
         method: "POST",
         headers: {
           "Authorization": `Bearer ${sessionStorage.getItem("token")}`,
@@ -60,7 +60,7 @@ const Sub = () => {
   const handlefav=async (fileId)=>{
     try{
       const userId=sessionStorage.getItem('userId');
-      const response = await fetch(`${process.env.URL}/uploadfiles/favourites/${fileId}`, {
+      const response = await fetch(`https://studify-backend.onrender.com/uploadfiles/favourites/${fileId}`, {
         method: "POST",
         headers: {
           "Authorization": `Bearer ${sessionStorage.getItem("token")}`,
@@ -105,7 +105,7 @@ const Sub = () => {
               <div key={index} className="file-card">
                 <h3>Title: {file.title || "File Name"}</h3>
                 <p>{file.description || "No description available."}</p>
-                <a href={`${process.env.URL}/files/${file.pdf}`} target="_blank" rel="noopener noreferrer">
+                <a href={`https://studify-backend.onrender.com/files/${file.pdf}`} target="_blank" rel="noopener noreferrer">
                   Download
                 </a>
                 <div className="actions">

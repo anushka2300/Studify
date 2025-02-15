@@ -6,7 +6,7 @@ const Favourites = () => {
 
   const fav = async () => {
     const token = sessionStorage.getItem('token');
-    const response = await fetch(`${process.env.URL}/uploadfiles/getfavourites`, {
+    const response = await fetch(`https://studify-backend.onrender.com/uploadfiles/getfavourites`, {
       method: "GET",
       headers: {
         "Authorization": `Bearer ${token}`,
@@ -32,7 +32,7 @@ const Favourites = () => {
               <p>{pdf.description}</p>
               <strong>File Name:</strong>{" "}
               <a
-                href={`http://localhost:8000/files/${pdf.pdf}`}
+                href={`https://studify-backend.onrender.com/files/${pdf.pdf}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="link"

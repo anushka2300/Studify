@@ -163,7 +163,7 @@ const Notes = () => {
         try{
           const token = sessionStorage.getItem('token');
           console.log("data sent")
-          const response=await fetch(`${process.env.URL}/uploadfiles/uploadfile`,{
+          const response=await fetch(`https://studify-backend.onrender.com/uploadfiles/uploadfile`,{
             method:"POST",
             headers: {
               'Authorization': `Bearer ${token}`,
