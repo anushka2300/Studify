@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Branch from './components/branches/branch'
+import Branch from './components/Branche/Branche'
 import Subject from './components/subjects/subject';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './components/login/login';
