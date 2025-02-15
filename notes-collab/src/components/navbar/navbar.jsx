@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import './navbar.css'
+import './Navbar.css'
 import { useNavigate } from 'react-router-dom';
 const Navbar = () => {
      const [user,setUser]=useState(null);

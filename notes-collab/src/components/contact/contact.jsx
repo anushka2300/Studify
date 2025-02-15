@@ -1,7 +1,7 @@
 import React from 'react';
 import './contactus.css';  
 import { useState } from 'react';
-import Navbar from '../navbar/navbar';
+import Navbar from '../navbar/Navbar';
 const Contact = () => {
     const [formData, setFormData] = useState({ name: '', email: '', message: '' });
     const [responseMessage, setResponseMessage] = useState('');

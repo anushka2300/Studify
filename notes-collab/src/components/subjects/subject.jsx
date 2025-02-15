@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate, useParams,Outlet } from 'react-router-dom'
 import './subject.css'
-import Navbar from '../navbar/navbar'
+import Navbar from '../navbar/Navbar'
 
 const Subject = () => {
     const {title}=useParams();

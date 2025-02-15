@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "../branchCard/Card";
 import './branch.css'
-import Navbar from "../navbar/navbar";
+import Navbar from "../navbar/Navbar";
 
 const branches = [
   { title: "Computer Science and Engineering", icon: "🔍", description: "Explore CS." },
