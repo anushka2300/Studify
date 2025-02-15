@@ -4,7 +4,7 @@ import Subject from './components/subjects/subject';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './components/login/login';
 import About from './components/about/About'
-import ContactUs from './components/contact/Contact';
+import Contactus from './components/contact/Contact';
 import Account from './components/account/MyAccount'
 import Notes from "./components/account/Notes"
 import Myuploads  from "./components/account/MyUploads"
@@ -19,7 +19,7 @@ return (
       <Routes>
         <Route path="/" element={<Branch/>} />
         <Route path="/about" element={<About/>} />
-        <Route path="/contact" element={<ContactUs/>} />
+        <Route path="/contact" element={<Contactus/>} />
         <Route path="/:title" element={<Subject />}/>
         <Route path="/:title/sub/:subject" element={<Sub/>}/>
         <Route path="/login" element={<Login/>} />
