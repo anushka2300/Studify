@@ -18,7 +18,7 @@ const storage = new CloudinaryStorage({
   params: {
     folder: 'uploads',   
     resource_type: "auto", 
-    format: async (req, file) => file.originalname.split('.').pop(),
+    public_id: (req, file) => `${file.originalname}`,
   },
 });
 
