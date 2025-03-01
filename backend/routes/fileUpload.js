@@ -17,7 +17,7 @@ const storage = new CloudinaryStorage({
   cloudinary: cloudinary,
   params: {
     folder: 'uploads',   
-    resource_type: 'raw', 
+    resource_type: 'auto', 
   },
 });
 
@@ -60,6 +60,7 @@ console.log(fileUrl);
   if(req.user){
     console.log("saved")
     await fileSchema.create({user:req.user,title:title,pdf:fileUrl,branch:branch,subject:subject,description:description});
+    console.log("Uploaded File Path:", req.file.path); 
     res.send({status:"ok"});
  }}
  catch(err){
@@ -74,6 +75,7 @@ router.get("/getfiles",authMiddleware,async (req,res)=>{
         return res.status(401).send({ status: "error", message: "Unauthorized access" });
       }
         const data=await fileSchema.find({user: req.user._id});
+        console.log("data data")
         res.send({status:"ok",data:data});
     }
     catch(err){
@@ -168,7 +170,7 @@ router.post('/like/:id',authMiddleware,async (req,res)=>{
   }
   catch(err){
         console.error(err);
-        res.status(500).json({ success: false, message: 'Internal server error' });
+        res.status(500).json({ success: false, message: 'oops..encountered some issue,you might be not an authorized person ' });
   }
 });
 
