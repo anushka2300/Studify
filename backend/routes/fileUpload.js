@@ -17,7 +17,8 @@ const storage = new CloudinaryStorage({
   cloudinary: cloudinary,
   params: {
     folder: 'uploads',   
-    resource_type: 'auto', 
+    resource_type: "auto", 
+    format: async (req, file) => file.originalname.split('.').pop(),
   },
 });
 
