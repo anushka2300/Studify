@@ -111,7 +111,7 @@ const Login = () => {
           <div className="input-group">
             <label htmlFor="password">Password</label>
             <input type="password" id="password" name="password" value={signupInfo.password} placeholder="Enter your password" required onChange={handleChange}/>
-            <p>password should contains min 4 characters</p>
+            <p className='warn'>password should contain min 4 characters</p>
           </div>
           <button type="submit" className="auth-btn">
             {isLogin ? 'Login' : 'Sign Up'}

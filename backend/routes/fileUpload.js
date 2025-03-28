@@ -17,8 +17,8 @@ const storage = new CloudinaryStorage({
   cloudinary: cloudinary,
   params: {
     folder: 'uploads',   
-    resource_type: "auto", 
-    public_id: (req, file) => `${file.originalname}`,
+    resource_type: 'raw', 
+    format: async (req, file) => 'pdf',
   },
 });
 
