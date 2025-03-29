@@ -12,7 +12,7 @@ require('./db')
 
 app.use(bodyParser.json());
 app.use(cors({
-    origin: ['https://exquisite-macaron-d6bbe5.netlify.app', 'http://localhost:5174'],
+    origin: ['https://startling-tiramisu-b59a6a.netlify.app', 'http://localhost:5174'],
     credentials: true
 }));
 
