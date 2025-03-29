@@ -105,9 +105,7 @@ const Sub = () => {
               <div key={index} className="file-card">
                 <h3>Title: {file.title || "File Name"}</h3>
                 <p>{file.description || "No description available."}</p>
-                <a href={`${file.pdf.replace('/upload/', '/upload/fl_attachment:false/')}`} 
-  target="_blank" 
-  rel="noopener noreferrer" >
+                <a href={file.pdf} target="_blank" rel="noopener noreferrer">
                   Download
                 </a>
                 <div className="actions">
