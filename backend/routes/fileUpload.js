@@ -15,14 +15,16 @@ const cloudinary=require('../cloudinaryConfig')
 
 const storage = new CloudinaryStorage({
   cloudinary: cloudinary,
-  params: {
-    folder: 'uploads',   
-    resource_type: 'raw', 
-    format: async (req, file) => 'pdf',
-    public_id: `${Date.now()}-${file.originalname.split('.')[0]}`
-
+  params: async (req, file) => {
+    return {
+      folder: 'uploads',
+      resource_type: 'raw',
+      format: 'pdf', 
+      public_id: `${Date.now()}-${path.parse(file.originalname).name}` 
+    };
   },
 });
+
 
 // const filter=(req,file,cb)=>{
 //   const allowedTypes = [
