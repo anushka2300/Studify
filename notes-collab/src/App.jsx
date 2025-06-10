@@ -3,7 +3,7 @@ import Branch from './components/Branche/Branche'
 import Subject from './components/subjects/subject';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './components/login/login';
-import About from './components/about/About'
+import About from './components/about/About.jsx'
 import Contactus from './components/contact/Contact';
 import Account from './components/account/MyAccount'
 import Notes from "./components/account/Notes"
