@@ -3,7 +3,7 @@ const contactSchema=require('../models/contact');
 
 router.post('/contact', async (req, res) => {
     const { name, email, message } = req.body;
-  console.log("api called")
+  
     try {
       const newContact = new contactSchema({ name, email, message });
       console.log(newContact);

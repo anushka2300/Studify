@@ -11,8 +11,6 @@ const user = require('../models/user');
 const { CloudinaryStorage } = require('multer-storage-cloudinary');
 const cloudinary=require('../cloudinaryConfig')
 
-// const upload = multer({ dest: './files' })
-
 const storage = new CloudinaryStorage({
   cloudinary: cloudinary,
   params: async (req, file) => {
@@ -25,23 +23,7 @@ const storage = new CloudinaryStorage({
   },
 });
 
-
-// const filter=(req,file,cb)=>{
-//   const allowedTypes = [
-//     'application/pdf',
-//     'application/msword',
-//     'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-//     'text/plain'
-//   ];
-
-// if (allowedTypes.includes(file.mimetype)) {
-//   cb(null, true);   
-// } else {
-//   cb(new Error('Only PDF, DOC, DOCX, and TXT files are allowed'), false);  
-// }
-// };
-
-
+ 
 const upload = multer({ storage: storage });
   
 router.post("/uploadfile",authMiddleware,upload.single("file"),async(req,res)=>{

@@ -6,7 +6,7 @@ const authRoute=require('./routes/auth')
 const uploadFile=require('./routes/fileUpload')
 const contactus=require('./routes/contact')
 app.use("/files",express.static("files"));
-4
+
 const PORT =process.env.PORT || 8000;
 require('./db')
 
