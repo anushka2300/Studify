@@ -1,46 +1,48 @@
-import React, { useEffect, useState } from 'react'
-import './Navbar.css'
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import './navbar.css';
+import { useNavigate, Link } from 'react-router-dom';
+
 const Navbar = () => {
-     const [user,setUser]=useState(null);
-     const navigate=useNavigate();
+  const [user, setUser] = useState(null);
+  const navigate = useNavigate();
 
-     useEffect(()=>{
-      const person=sessionStorage.getItem('userName');
-      setUser(person);
-     },[]);
+  useEffect(() => {
+    const person = sessionStorage.getItem('userName');
+    setUser(person);
+  }, []);
 
-     const handleLogout=()=>{
-      sessionStorage.clear(); 
-      localStorage.setItem("logout", Date.now().toString());
-      setUser(null);
-      navigate('/');
-     }
-     
-     
+  const handleLogout = () => {
+    sessionStorage.clear();
+    localStorage.setItem("logout", Date.now().toString());
+    setUser(null);
+    navigate('/');
+  };
+
   return (
     <div> 
-        <nav className="navbar">
+      <nav className="navbar">
         <div className="navbar-logo">Studify</div>
         <ul className="navbar-links">
-          <li><a href="/" className='ele'>Home</a></li>
-          <li><a href="/about" className='ele'>About</a></li>
+          <li><Link to="/" className="ele">Home</Link></li>
+          <li><Link to="/about" className="ele">About</Link></li>
+          <li><Link to="/contact" className="ele">Contact</Link></li>
 
-          <li><a href="/contact" className='ele'>Contact</a></li>
-          {!user ?(
-          <li><a href="/login" className='login'>LOGIN</a></li>):
-          (
+          {!user ? (
+            <li><Link to="/login" className="login">LOGIN</Link></li>
+          ) : (
             <>
-            <li><a href="/account" className='login' >My Account</a></li>
-            <li><a className='login' onClick={handleLogout}>LOGOUT</a></li>
+              <li><Link to="/account" className="login">My Account</Link></li>
+              <li>
+                <button className="login" onClick={handleLogout} style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}>
+                  LOGOUT
+                </button>
+              </li>
             </>
-          )
-}
+          )}
         </ul>
-          
       </nav>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
